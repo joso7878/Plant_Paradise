@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Importe suas telas aqui
 import HomeScreen from './HomeScreen';
 import LoginScreen from './LoginScreen';
-import RegistrationScreen from './RegistrationScreen';
+import RegistrationScreen from './Cadastro';
 
 // Crie uma pilha de navegação
 const Stack = createNativeStackNavigator();
