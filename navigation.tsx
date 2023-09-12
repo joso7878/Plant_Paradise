@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './HomeScreen';
 import LoginScreen from './LoginScreen';
 import RegistrationScreen from './Cadastro';
+import PerfileScreen from './PerfileScreen';
 
 // Crie uma pilha de navegação
 const Stack = createNativeStackNavigator();
@@ -18,6 +19,7 @@ const App = () => {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Registration" component={RegistrationScreen} />
+        <Stack.Screen name="Perfile" component={PerfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

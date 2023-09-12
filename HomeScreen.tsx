@@ -18,7 +18,7 @@ const LoginScreen = ({ navigation }) => {
                     Find your favorite plants and{'\n'}help the environment
                 </Text>
                 <View  style={styles.buttonSubContainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('login')} style={styles.buttonContainer}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.buttonContainer}>
                         <Text style={styles.buttonText}>Sign In</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigation.navigate('Registration')} style={styles.buttonContainer}>
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         lineHeight: 60,
         letterSpacing: 0,
         textAlign: 'left',
-        color: '#418B64', // Alterado para a cor primária
+        color: 'black', // Alterado para a cor primária
     },
     SubTitle: {
         fontFamily: 'Poppins-Regular',
