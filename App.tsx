@@ -12,6 +12,7 @@ import PerfileScreen from './PerfileScreen';
 import FirstScreen from './HomeScreen';
 import InitiaScreen from './InitialScreen';
 import DetailsScreen from './DetailScreen';
+import CartScreen from './CartScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Home' }} />
         <Stack.Screen name="InitialScreen" component={InitiaScreen} options={{ title: 'Initial' }} />
         <Stack.Screen name='DetailsScreen' component={DetailsScreen}/>
+        <Stack.Screen name="CartScreen" component={CartScreen}/>
 
 
 

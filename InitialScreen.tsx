@@ -89,7 +89,7 @@ const HomeScreen = () => {
                 Hi, {showUserNickName('Joso')}
               </Text>
               <TouchableOpacity
-                onPress={() => navigation.navigate('Profile')}
+                onPress={() => navigation.navigate('Perfile')}
               >
                 <Image
                   style={styles.UserIconImage}
@@ -186,7 +186,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.NavbarButton}
-          onPress={() => navigation.navigate('Cart')}
+          onPress={() => navigation.navigate('CartScreen')}
         >
           <Text style={styles.NavbarButtonText}>Cart</Text>
         </TouchableOpacity>
