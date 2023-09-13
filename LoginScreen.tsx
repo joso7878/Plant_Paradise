@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -14,6 +15,7 @@ const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       // Login bem-sucedido
       // Você pode adicionar aqui qualquer outra lógica que desejar após o login bem-sucedido, como navegar para outra tela
       console.log('Login bem-sucedido!');
+      navigation.navigate('InitialScreen');
     } catch (error) {
       // Se ocorrer um erro durante o login, você pode lidar com ele aqui
       console.error('Erro ao fazer login:', error.message);

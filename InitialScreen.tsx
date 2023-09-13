@@ -86,14 +86,14 @@ const HomeScreen = () => {
           <View style={styles.SubContainer}>
             <View style={styles.profileContainer}>
               <Text style={styles.HeaderText}>
-                Hi, {showUserNickName('Matheus asexual')}
+                Hi, {showUserNickName('Joso')}
               </Text>
               <TouchableOpacity
-                onPress={() => navigation.navigate('ProfileScreen')}
+                onPress={() => navigation.navigate('Login')}
               >
                 <Image
                   style={styles.UserIconImage}
-                  source={require('../assets/userIcon.png')}
+                  source={require('../Plant_Paradise/assets/userknow.png')}
                 />
               </TouchableOpacity>
             </View>
@@ -107,7 +107,7 @@ const HomeScreen = () => {
                   <TouchableOpacity
                     key={item.id}
                     onPress={() => {
-                      navigation.navigate('DetailScreen', { plant: item });
+                      navigation.navigate('Login', { plant: item });
                     }}
                   >
                     <View style={styles.productCard}>
@@ -156,7 +156,7 @@ const HomeScreen = () => {
                         </Text>
                     <TouchableOpacity style={styles.PlantCardAddToCartButton}>
                         <Image
-                        source={require('../assets/shopping_bag.png')}
+                        source={require('../Plant_Paradise/assets/shopping_bag.png')}
                         style={styles.ShoppingIcon}
                         />
                     </TouchableOpacity>
@@ -172,19 +172,19 @@ const HomeScreen = () => {
       <View style={styles.NavbarContainer}>
         <TouchableOpacity
           style={styles.NavbarButton}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Login')}
         >
           <Text style={styles.NavbarButtonText}>Home</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.NavbarButton}
-          onPress={() => navigation.navigate('Favorites')}
+          onPress={() => navigation.navigate('Login')}
         >
           <Text style={styles.NavbarButtonText}>Favor</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.NavbarButton}
-          onPress={() => navigation.navigate('Cart')}
+          onPress={() => navigation.navigate('Login')}
         >
           <Text style={styles.NavbarButtonText}>Cart</Text>
         </TouchableOpacity>
