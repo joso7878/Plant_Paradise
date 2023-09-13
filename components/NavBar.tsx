@@ -22,7 +22,7 @@ const Navbar = () => {
     <View style={styles.NavbarContainer}>
       <TouchableOpacity
         style={styles.NavbarButton}
-        onPress={() => handleNavigation('Home')}
+        onPress={() => handleNavigation('InitialScreen')}
       >
         <Image
           style={styles.ShoppinBag}
@@ -64,7 +64,7 @@ const Navbar = () => {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.NavbarButton}
-        onPress={() => handleNavigation('Cart')}
+        onPress={() => handleNavigation('CartScreen')}
       >
         <Image
           style={styles.ShoppinBag}

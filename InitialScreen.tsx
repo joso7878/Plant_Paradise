@@ -180,13 +180,13 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.NavbarButton}
-          onPress={() => navigation.navigate('Favorites')}
+          onPress={() => navigation.navigate('CartScreen')}
         >
           <Text style={styles.NavbarButtonText}>Favorites</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.NavbarButton}
-          onPress={() => navigation.navigate('CartScreen')}
+          onPress={() => navigation.navigate('CheckoutScreen')}
         >
           <Text style={styles.NavbarButtonText}>Cart</Text>
         </TouchableOpacity>

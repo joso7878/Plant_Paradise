@@ -60,7 +60,7 @@ const DetailsScreen = () => {
         <Text style={styles.totalText}>Total: ${parseFloat(plant.price * quantity).toFixed(2)}</Text>
         <TouchableOpacity
           style={styles.addToCartButton}
-          onPress={() => navigation.navigate('Cart')} // Navegação para o carrinho
+          onPress={() => navigation.navigate('CartScreen')} // Navegação para o carrinho
         >
           <Text style={styles.addToCartButtonText}>Add to Cart</Text>
         </TouchableOpacity>
