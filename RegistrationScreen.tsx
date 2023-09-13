@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import firebaseConfig from './ConfigFireBase';
+import { initializeApp } from 'firebase/app';
 
 const RegistrationScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [name, setName] = useState('');
