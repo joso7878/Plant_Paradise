@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { useNavigation } from "@react-navigation/native";
 
 const UserProfileScreen = ({ navigation }) => {
   // Supondo que você tenha os dados do usuário, como nome, e-mail e imagem do perfil
@@ -7,6 +8,14 @@ const UserProfileScreen = ({ navigation }) => {
     name: 'John Doe', // Nome do usuário
     email: 'fulano123@gmail.com', // E-mail do usuário
     profileImage: require('./assets/userknow.png'), // Imagem do perfil
+  };
+
+  // Função para lidar com o clique no botão de sair
+  const handleLogout = () => {
+    // Adicione aqui a lógica para efetuar o logout, se necessário
+
+    // Navega para a tela HomeScreen
+    navigation.navigate('Login');
   };
 
   return (
@@ -18,7 +27,10 @@ const UserProfileScreen = ({ navigation }) => {
           <Text style={styles.userEmail}>{userData.email}</Text>
         </View>
 
-        <TouchableOpacity style={styles.logoutButton}>
+        <TouchableOpacity
+          style={styles.logoutButton}
+          onPress={handleLogout} // Chama a função de logout ao ser clicado
+        >
           <Text style={styles.logoutButtonText}>Sair</Text>
         </TouchableOpacity>
       </View>
@@ -92,7 +104,7 @@ const styles = StyleSheet.create({
   logoutButtonText: {
     color: 'white',
     fontSize: 18,
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Regular',
     fontWeight: '500',
   },
 });

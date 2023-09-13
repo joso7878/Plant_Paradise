@@ -89,7 +89,7 @@ const HomeScreen = () => {
                 Hi, {showUserNickName('Joso')}
               </Text>
               <TouchableOpacity
-                onPress={() => navigation.navigate('Login')}
+                onPress={() => navigation.navigate('Perfile')}
               >
                 <Image
                   style={styles.UserIconImage}
