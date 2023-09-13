@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Text, StyleSheet, View, TouchableOpacity, ImageSourcePropType, ImageBackground } from 'react-native';
+import { GlobalStyles } from "./constants/style";
+import { useNavigation } from "@react-navigation/native";
 
 const LoginScreen = ({ navigation }) => {
     const backgroundImage: ImageSourcePropType = require('../Plant_Paradise/assets/background.jpg');

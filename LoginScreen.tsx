@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 const LoginScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Implemente a lógica de login aqui
+  const handleLogin = async () => {
+    try {
+      const auth = getAuth();
+      await signInWithEmailAndPassword(auth, email, password);
+
+      // Login bem-sucedido
+      // Você pode adicionar aqui qualquer outra lógica que desejar após o login bem-sucedido, como navegar para outra tela
+      console.log('Login bem-sucedido!');
+    } catch (error) {
+      // Se ocorrer um erro durante o login, você pode lidar com ele aqui
+      console.error('Erro ao fazer login:', error.message);
+    }
   };
 
   return (

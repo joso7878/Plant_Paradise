@@ -9,6 +9,7 @@ import HomeScreen from './HomeScreen';
 import LoginScreen from './LoginScreen';
 import RegistrationScreen from './RegistrationScreen';
 import PerfileScreen from './PerfileScreen';
+import FirstScreen from './HomeScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,8 +29,9 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {/* Coloque as telas da primeira pasta aqui */}
         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Plantinhas' }} />
-        <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Login' }} />
         <Stack.Screen name="Registration" component={RegistrationScreen} options={{ title: 'Cadastro' }} />
+        <Stack.Screen name="Login" component={LoginScreen} options={{ title: 'Home' }} />
+
 
         {/* Coloque as telas da segunda pasta aqui */}
         <Stack.Screen name="Perfile" component={PerfileScreen} options={{ title: 'Plantinhas' }} />

@@ -1,16 +1,33 @@
+// Importe as bibliotecas do Firebase
+import { initializeApp } from 'firebase/app';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-import firebaseConfig from './ConfigFireBase';
-import { initializeApp } from 'firebase/app';
+
+// Importe sua configuração do Firebase
+import { firebaseConfig } from './ConfigFireBase';
+
+// Inicialize o Firebase no início do seu aplicativo
+const app = initializeApp(firebaseConfig);
 
 const RegistrationScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleRegistration = () => {
-    // Implemente a lógica de registro aqui
+  const handleRegistration = async () => {
+    try {
+      const auth = getAuth();
+      await createUserWithEmailAndPassword(auth, email, password);
+
+      // Registro bem-sucedido
+      // Você pode adicionar aqui qualquer outra lógica que desejar após o registro bem-sucedido, como navegar para outra tela
+      console.log('Registro bem-sucedido!');
+    } catch (error) {
+      // Se ocorrer um erro durante o registro, você pode lidar com ele aqui
+      console.error('Erro ao registrar:', error.message);
+    }
   };
 
   return (
